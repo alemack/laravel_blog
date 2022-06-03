@@ -14,7 +14,7 @@ class ContactController extends Controller {
         $contact = New Contact();
         $contact->name = $req->input('name');
         $contact->email = $req->input('email');
-        $contact->subject = $req->input('name');
+        $contact->subject = $req->input('subject');
         $contact->message = $req->input('message');
 
         $contact->save();
@@ -52,6 +52,34 @@ class ContactController extends Controller {
         # return view('messages', ['data'=>$contact->where('email', '=', 'miki@wdw.com')->get()]);
 
         // вернёт все значения
-        # return view('messages', ['data'=>Contact::all()]);
+        return view('messages', ['data'=>Contact::all()]);
+    }
+
+    public function showOneMessage($id) {
+        $contact = new Contact();
+        return view('one-message', ['data'=>$contact->find($id)]);
+    }
+
+    public function updateMessage($id) {
+        $contact = new Contact();
+        return view('update-message', ['data'=>$contact->find($id)]);
+    }
+
+    public function updateMessageSubmit($id, ContactRequest $req) {
+
+        $contact = Contact::find($id);
+        $contact->name = $req->input('name');
+        $contact->email = $req->input('email');
+        $contact->subject = $req->input('subject');
+        $contact->message = $req->input('message');
+
+        $contact->save();
+
+        return redirect()->route('contact-data-one', $id)->with('success', 'Сообщение было обновлено');
+    }
+
+    public function deleteMessage($id) {
+        Contact::find($id)->delete();
+        return redirect()->route('contact-data')->with('success', 'Сообщение было удалено');
     }
 }
