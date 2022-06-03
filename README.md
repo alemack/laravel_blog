@@ -2,18 +2,18 @@
 
 <hr>
 #### Главная страница
-![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/about.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/home.png)
 <hr>
 #### Главная про нас
-![](imgPojects/about.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/about.png)
 <hr>
 #### Страница добавления записи в бд
-![](imgPojects/addContact.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/addContact.png)
 <hr>
 #### Страница отображения всех записей бд
-![](imgPojects/allContacts.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/allContacts.png)
 <hr>
 #### Страница детальной информации о выбранной записи
 ###### Есть возможность отредактировать запись или удалить
-![](imgPojects/oneContact.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/oneContact.png)
 <hr>
