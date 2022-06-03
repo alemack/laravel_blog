@@ -2,7 +2,7 @@
 
 <hr>
 #### Главная страница
-![](imgPojects/home.png)
+![](https://github.com/alemack/laravel_blog/blob/main/imgPojects/about.png)
 <hr>
 #### Главная про нас
 ![](imgPojects/about.png)
